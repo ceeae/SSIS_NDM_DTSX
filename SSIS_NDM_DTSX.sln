@@ -9,12 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", 
 		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SetupTable_oraAccertamenti.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SetupTable_oraAccertamenti.sql
 		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskCommand_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskCommand_TruncateTable.sql
 		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskStatement_AppenToProvvAccentramenti.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskStatement_AppenToProvvAccentramenti.sql
-		SSIS_NDM_DTSX\SqlScripts\Readme.txt = SSIS_NDM_DTSX\SqlScripts\Readme.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles", "{C93F9856-6F76-4AC1-BBDE-65BD66AFA675}"
 	ProjectSection(SolutionItems) = preProject
 		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6834F5C7-301B-4BA1-966C-89B93093CE25}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Global
