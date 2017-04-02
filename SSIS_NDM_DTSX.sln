@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "SSIS_NDM_DTSX", "SSIS_NDM_DTSX\SSIS_NDM_DTSX.dtproj", "{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{B06A6C35-7697-429A-8965-2947A1436F9A}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\SqlScripts\append_new.txt = SSIS_NDM_DTSX\SqlScripts\append_new.txt
+		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SetupTable_oraAccertamenti.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SetupTable_oraAccertamenti.sql
+		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskCommand_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskCommand_TruncateTable.sql
+		SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskStatement_AppenToProvvAccentramenti.sql = SSIS_NDM_DTSX\SqlScripts\import_sql_flowB_SQLTaskStatement_AppenToProvvAccentramenti.sql
+		SSIS_NDM_DTSX\SqlScripts\Readme.txt = SSIS_NDM_DTSX\SqlScripts\Readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles", "{C93F9856-6F76-4AC1-BBDE-65BD66AFA675}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}.Development|Default.ActiveCfg = Development
+		{BE5BFEC2-A8AD-49ED-A76C-6953103374A7}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
