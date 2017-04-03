@@ -11,34 +11,34 @@ INSERT INTO [ProvvPagamentiAccentrati]
            ,[Log_Inserimento]
            ,[Log_InserimentoDataOra]
   			)
-SELECT 
-	g.TIPOLOGIA_ACCENTRAMENTO
-   ,g.COD_SEPRAG
-   ,g.NUM_FATTURA
-   ,g.NUM_DOCUMENTO
-   ,g.DATA
-   ,g.SEPRAG_EMITTENTE
-   ,g.PAGAMENTO
-   , 'IMPORT' AS Log_Inserimento
-   , GETDATE() AS Log_InserimentoDataOra
- FROM (
-			SELECT TOP 100 PERCENT
-				   TIPOLOGIA_ACCENTRAMENTO
-				  ,COD_SEPRAG
-				  ,NUM_FATTURA
-				  ,NUM_DOCUMENTO
-				  ,DATA
-				  ,SEPRAG_EMITTENTE
-				  ,PAGAMENTO
-	     FROM [_oraAccentramenti]
-		 GROUP BY 
-		   TIPOLOGIA_ACCENTRAMENTO
-			  ,COD_SEPRAG
-			  ,NUM_FATTURA
-			  ,NUM_DOCUMENTO
-			  ,DATA
-			  ,SEPRAG_EMITTENTE
-			  ,PAGAMENTO
+			SELECT 
+				g.TIPOLOGIA_ACCENTRAMENTO
+			   ,g.COD_SEPRAG
+			   ,g.NUM_FATTURA
+			   ,g.NUM_DOCUMENTO
+			   ,g.DATA
+			   ,g.SEPRAG_EMITTENTE
+			   ,g.PAGAMENTO
+			   , 'IMPORT' AS Log_Inserimento
+			   , GETDATE() AS Log_InserimentoDataOra
+			 FROM (
+						SELECT TOP 100 PERCENT
+							   TIPOLOGIA_ACCENTRAMENTO
+							  ,COD_SEPRAG
+							  ,NUM_FATTURA
+							  ,NUM_DOCUMENTO
+							  ,DATA
+							  ,SEPRAG_EMITTENTE
+							  ,PAGAMENTO
+					 FROM [_oraAccentramenti]
+					 GROUP BY 
+					   TIPOLOGIA_ACCENTRAMENTO
+						  ,COD_SEPRAG
+						  ,NUM_FATTURA
+						  ,NUM_DOCUMENTO
+						  ,DATA
+						  ,SEPRAG_EMITTENTE
+						  ,PAGAMENTO
 
 ) AS g 
 LEFT JOIN ProvvPagamentiAccentrati AS m 
