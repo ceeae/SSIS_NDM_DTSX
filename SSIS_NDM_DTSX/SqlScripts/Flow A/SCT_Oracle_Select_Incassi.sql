@@ -1,5 +1,5 @@
 --QUERY AGGREGAZIONE PRINCIPALE
-
+return @"
 SELECT  quietanza.id_quietanza as chiave,
 	case
 	when quietanza.id_tipo_modello = 1 then 1
@@ -92,7 +92,7 @@ from
 	TOPONIMO toponimoLocale,
 	COMUNE comuneLocale,
 	TIPO_DOCUMENTO tipoDocumento,
-	GENERE_LOCALE genereLocale;
+	GENERE_LOCALE genereLocale
 	
 where
 	quietanza.STATO in('S','A')   
@@ -103,8 +103,10 @@ where
 	stradaLocale.COD_COMUNE=comuneLocale.COD_COMUNE and		    
 	tipoDocumento.ID_TIPO_DOCUMENTO=quietanza.ID_TIPO_DOCUMENTO and
 	locale.cod_genere_locale = generelocale.cod_genere_locale
-	and quietanza.cod_seprag = :codiceSeprag
-	and quietanza.data >= :dataReversaleDa and quietanza.data < :dataReversaleA
+	and quietanza.data >= TO_DATE({0}, {2}) 
+    and quietanza.data < TO_DATE({1}, {2})
+
 order by 
 	numtipomodello, 
 	quietanza.NUM_DOCUMENTO
+";

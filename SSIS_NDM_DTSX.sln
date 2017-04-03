@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles", "{C93F9856-6F76-4AC1-BBDE-65BD66AFA675}"
 	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_A.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_A.dtsConfig
 		SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig = SSIS_NDM_DTSX\ConfFiles\import_sql_flow_B.dtsConfig
 	EndProjectSection
 EndProject
@@ -17,13 +18,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6834F5C7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow B", "Flow B", "{BF98AE13-7B23-4C05-9069-E7CC73016534}"
 	ProjectSection(SolutionItems) = preProject
-		SSIS_NDM_DTSX\SqlScripts\Flow B\append_new.txt = SSIS_NDM_DTSX\SqlScripts\Flow B\append_new.txt
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SetupTable_oraAccetramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SetupTable_oraAccetramenti.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_InsertDetails_ProvvPagamentiAccentratiDettaglio.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_InsertDetails_ProvvPagamentiAccentratiDettaglio.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_TruncateTable.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_AppendNew_ProvvPagamentiAccentrati.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_AppendNew_ProvvPagamentiAccentrati.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_UpdateIdSeprag_ProvvPagamentiAccentrati.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_UpdateIdSeprag_ProvvPagamentiAccentrati.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_UpdateIdSepragEmittente_ProvvPagamentiAccentrati.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQLStatement_UpdateIdSepragEmittente_ProvvPagamentiAccentrati.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SCT_Oracle_Select_Accentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SCT_Oracle_Select_Accentramenti.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SetupTable_oraAccentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SetupTable_oraAccentramenti.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_oraAccentramenti_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_oraAccentramenti_TruncateTable.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_AppendNew.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_AppendNew.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_Update_IdSeprag.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_Update_IdSeprag.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentratiDettaglio_CursorInsertDetails.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentratiDettaglio_CursorInsertDetails.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentratiDettaglio_Update_IdSepragLocale.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT_ProvvPagamentiAccentratiDettaglio_Update_IdSepragLocale.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow A", "Flow A", "{A9ABDE21-D044-4607-A221-D41117D8D10D}"
+	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT_Oracle_Given_IdQuietanza_Select_VociIncasso.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT_Oracle_Given_IdQuietanza_Select_VociIncasso.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT_Oracle_Select_Incassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT_Oracle_Select_Incassi.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SetupTable_oraIncassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SetupTable_oraIncassi.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT_oraIncassi_SelectDistinct_IdQuietanza_Id.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT_oraIncassi_SelectDistinct_IdQuietanza_Id.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT_oraIncassi_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT_oraIncassi_TruncateTable.sql
 	EndProjectSection
 EndProject
 Global
@@ -39,5 +50,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BF98AE13-7B23-4C05-9069-E7CC73016534} = {B06A6C35-7697-429A-8965-2947A1436F9A}
+		{A9ABDE21-D044-4607-A221-D41117D8D10D} = {B06A6C35-7697-429A-8965-2947A1436F9A}
 	EndGlobalSection
 EndGlobal

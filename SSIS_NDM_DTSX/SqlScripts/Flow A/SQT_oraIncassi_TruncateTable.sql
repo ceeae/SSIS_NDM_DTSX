@@ -1,6 +1,6 @@
 USE SchedarioTerritorio
 DECLARE @TableName VARCHAR(50);
-SET @TableName = '_oraAccentramenti'
+SET @TableName = '_oraIncassi'
 
 DECLARE @CreateTableSQLQuery VARCHAR(MAX);
 

@@ -1,0 +1,2 @@
+use SchedarioTerritorio
+select distinct idquietanza from _oraIncassi
