@@ -1,4 +1,10 @@
---QUERY AGGREGAZIONE PRINCIPALE
+-- Query di Aggregazione Principale
+--
+-- Paramentri:
+-- {0} Data Quietanda Da
+-- {1} Data Quietanza A
+-- {2} Formato Data "'dd-mm-yyyy 12:00:00 AM'"
+
 return @"
 SELECT  quietanza.id_quietanza as chiave,
 	case
