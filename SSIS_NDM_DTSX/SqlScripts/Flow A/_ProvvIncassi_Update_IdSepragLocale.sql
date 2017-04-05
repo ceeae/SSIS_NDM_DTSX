@@ -1,3 +1,4 @@
+USE SchedarioTerritorio
 UPDATE ProvvIncassi SET IdSepragLocale = n.IdSeprag
 FROM(
 select TOP 100 PERCENT i.id, 
