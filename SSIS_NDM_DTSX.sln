@@ -13,7 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6834F5C7-301B-4BA1-966C-89B93093CE25}"
 	ProjectSection(SolutionItems) = preProject
-		Readme.md = Readme.md
+		SSIS_NDM_DTSX\Notes\Readme.md = SSIS_NDM_DTSX\Notes\Readme.md
+		SSIS_NDM_DTSX\Notes\tnsnames.ora = SSIS_NDM_DTSX\Notes\tnsnames.ora
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow B", "Flow B", "{BF98AE13-7B23-4C05-9069-E7CC73016534}"
