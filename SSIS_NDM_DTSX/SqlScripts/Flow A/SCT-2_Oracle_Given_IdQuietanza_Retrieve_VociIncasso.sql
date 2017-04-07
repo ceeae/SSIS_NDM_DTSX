@@ -1,3 +1,4 @@
+-- Download All Dettagli from Oracle (given ID_QUIETANZA)
 return @"
 select
 	trim( cast( voceQuietanza.COD_VOCE_INCASSO as varchar(4) ) ) as codiceVoceIncasso,

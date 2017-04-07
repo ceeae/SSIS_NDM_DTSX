@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigFiles", "ConfigFiles"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{6834F5C7-301B-4BA1-966C-89B93093CE25}"
 	ProjectSection(SolutionItems) = preProject
+		SSIS_NDM_DTSX\Notes\Checks_.sql = SSIS_NDM_DTSX\Notes\Checks_.sql
 		SSIS_NDM_DTSX\Notes\Readme.md = SSIS_NDM_DTSX\Notes\Readme.md
 		SSIS_NDM_DTSX\Notes\tnsnames.ora = SSIS_NDM_DTSX\Notes\tnsnames.ora
 	EndProjectSection
@@ -22,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow B", "Flow B", "{BF98AE
 		SSIS_NDM_DTSX\SqlScripts\Flow B\_Readme_Flow_B.md = SSIS_NDM_DTSX\SqlScripts\Flow B\_Readme_Flow_B.md
 		SSIS_NDM_DTSX\SqlScripts\Flow B\_SetupTable_oraAccentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\_SetupTable_oraAccentramenti.sql
 		SSIS_NDM_DTSX\SqlScripts\Flow B\SCT-1_Oracle_Select_Accentramenti.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SCT-1_Oracle_Select_Accentramenti.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_TruncateTable.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_DeleteTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-1_oraAccentramenti_DeleteTable.sql
 		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-2_ProvvPagamentiAccentrati_AppendNew.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-2_ProvvPagamentiAccentrati_AppendNew.sql
 		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-3_ProvvPagamentiAccentrati_Update_IdSeprag.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-3_ProvvPagamentiAccentrati_Update_IdSeprag.sql
 		SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-4_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql = SSIS_NDM_DTSX\SqlScripts\Flow B\SQT-4_ProvvPagamentiAccentrati_Update_IdSepragEmittente.sql
@@ -34,10 +35,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flow A", "Flow A", "{A9ABDE
 	ProjectSection(SolutionItems) = preProject
 		SSIS_NDM_DTSX\SqlScripts\Flow A\_Readme_Flow_A.md = SSIS_NDM_DTSX\SqlScripts\Flow A\_Readme_Flow_A.md
 		SSIS_NDM_DTSX\SqlScripts\Flow A\_SetupTable_oraIncassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\_SetupTable_oraIncassi.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\ODB-1_oraIncassi_SelectNewIdQuietanza.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\ODB-1_oraIncassi_SelectNewIdQuietanza.sql
 		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-1_Oracle_Select_Incassi.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-1_Oracle_Select_Incassi.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Select_VociIncasso.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Select_VociIncasso.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_TruncateTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_TruncateTable.sql
-		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_oraIncassi_SelectDistinct_IdQuietanza_Id.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_oraIncassi_SelectDistinct_IdQuietanza_Id.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Retrieve_VociIncasso.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SCT-2_Oracle_Given_IdQuietanza_Retrieve_VociIncasso.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_DeleteTable.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-1_oraIncassi_DeleteTable.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_ProvvIncassi_Select_IdQuietanza_Id.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-2_ProvvIncassi_Select_IdQuietanza_Id.sql
+		SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-3_ProvvIncassi_Update_IdSeprag.sql = SSIS_NDM_DTSX\SqlScripts\Flow A\SQT-3_ProvvIncassi_Update_IdSeprag.sql
 	EndProjectSection
 EndProject
 Global

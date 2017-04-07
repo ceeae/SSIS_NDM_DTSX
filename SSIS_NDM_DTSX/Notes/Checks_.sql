@@ -39,18 +39,11 @@ User Id= NETDMUSR ;
 Password= netdmusr1!;
 
 
--- ProvvIncassi
+##### ProvvIncassi
 
--- CHECK: Unicità IdQuietanza 
-USE SchedarioTerritorio
-SELECT COUNT(IdQuietanza)
-  FROM [SchedarioTerritorio].[dbo].[ProvvIncassi]
-  WHERE IdQuietanza IS NOT NULL
-  GROUP BY IdQuietanza
-  HAVING COUNT(IdQuietanza) > 1
   
-  
- -- Quietanza in ProvvIncassi con Almeno un Dettaglio
+ -- ***** Distinct Quietanze in ProvvIncassi con Almeno un Dettaglio
+ 
 --USE SchedarioTerritorio
 --SELECT DISTINCT KK.Idquietanza FROM (
 --	SELECT pri.IdQuietanza FROM ProvvIncassi pri LEFT JOIN ProvvIncassiDettaglio dett 
@@ -61,15 +54,31 @@ SELECT COUNT(IdQuietanza)
 --select COUNT(*) from ProvvIncassi
 
 
--- Check Duplicates on ProvvIncassi
-USE SchedarioTerritorio
+-- ******** Check Downloading Progress (ProvvIncassiDettaglio)
+
+--USE SchedarioTerritorio
+--SELECT COUNT(idq) FROM (
+--	SELECT DISTINCT ora.idquietanza as idq, ora.id, dett.IdQuietanza, dett.Voce FROM _oraIncassi ora
+--	LEFT JOIN 
+--		(
+--		SELECT DISTINCT idquietanza, Voce FROM ProvvIncassiDettaglio WHERE IdQuietanza IS NOT NULL
+--		) AS dett 
+--	ON ora.idquietanza = dett.idquietanza 
+--	WHERE dett.idquietanza IS NULL
+--) as kk
+
+-- ******** Check Duplicates on ProvvIncassi
+
+--USE SchedarioTerritorio
 --SELECT COUNT(IdQuietanza)
 --  FROM [SchedarioTerritorio].[dbo].[ProvvIncassi]
 --  WHERE IdQuietanza IS NOT NULL
 --  GROUP BY IdQuietanza
 --  HAVING COUNT(IdQuietanza) > 1
 
--- Remove Duplicates on ProvvIncassi
+-- ********** Remove Duplicates on ProvvIncassi
+
+--USE SchedarioTerritorio
 --WITH tt (Id, IdQuietanza) AS (
 	--SELECT Id, IdQuietanza FROM ProvvIncassi WHERE IdQuietanza IN (
 	--	SELECT IdQuietanza FROM ProvvIncassi
